@@ -1,0 +1,84 @@
+body {
+  font-family: 'Название шрифта', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+header {
+  background-color: #ffcbd9;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  color: #f36f8a;
+  font-size: 24px;
+}
+
+.content {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.slideshow {
+  position: relative;
+  display: inline-block;
+}
+
+.slideshow img {
+  width: 800px;
+  height: 500px;
+  object-fit: cover;
+  border: 2px solid #f36f8a;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 40%;
+  font-size: 30px;
+  cursor: pointer;
+  color: #f36f8a;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+#slideshow-caption {
+  color: #f36f8a;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.background-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(45deg, #f36f8a, #ffcbd9, #fde8e8, #ffcbd9, #f36f8a);
+  background-size: 600% 600%;
+  animation: gradientAnimation 20s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
